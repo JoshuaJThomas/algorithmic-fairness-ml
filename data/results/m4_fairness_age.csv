@@ -1,0 +1,5 @@
+model,sensitive_attribute,reference_group,comparison_group,positive_rate_reference,positive_rate_comparison,demographic_parity_difference,equalized_odds_difference,disparate_impact_ratio
+Logistic Regression,age_binary,Older,Younger,0.8197,0.1805,0.6392,0.5857,0.2202
+Decision Tree,age_binary,Older,Younger,0.2541,0.0349,0.2192,0.1719,0.1374
+Random Forest,age_binary,Older,Younger,0.2295,0.0324,0.1971,0.1911,0.1412
+XGBoost,age_binary,Older,Younger,0.291,0.0358,0.2552,0.2392,0.123

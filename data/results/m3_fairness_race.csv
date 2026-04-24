@@ -1,0 +1,5 @@
+model,sensitive_attribute,reference_group,comparison_group,positive_rate_reference,positive_rate_comparison,demographic_parity_difference,equalized_odds_difference,disparate_impact_ratio
+Logistic Regression,race,African-American-and-Other,Caucasian,0.5136,0.2927,0.2209,0.2461,0.57
+Decision Tree,race,African-American-and-Other,Caucasian,0.5012,0.2787,0.2225,0.2759,0.556
+Random Forest,race,African-American-and-Other,Caucasian,0.4307,0.2319,0.1988,0.2421,0.5383
+XGBoost,race,African-American-and-Other,Caucasian,0.4418,0.2459,0.1959,0.2434,0.5566

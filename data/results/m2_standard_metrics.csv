@@ -1,0 +1,5 @@
+model,accuracy,precision,sensitivity,specificity,f1_macro,f1_weighted,auc_roc,cohen_kappa
+XGBoost,0.8175,0.6625,0.3564,0.9484,0.6768,0.7957,0.7784,0.3653
+Random Forest,0.8165,0.6592,0.3527,0.9482,0.6745,0.7944,0.7698,0.361
+Decision Tree,0.8177,0.6639,0.3557,0.9489,0.6767,0.7957,0.7424,0.3652
+Logistic Regression,0.6795,0.3671,0.6202,0.6963,0.6166,0.7032,0.7081,0.2539

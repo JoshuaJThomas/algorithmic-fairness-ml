@@ -1,0 +1,5 @@
+model,sensitive_attribute,reference_group,comparison_group,positive_rate_reference,positive_rate_comparison,demographic_parity_difference,equalized_odds_difference,disparate_impact_ratio
+Logistic Regression,marital_binary,Single_Divorced,Married,0.2314,0.1785,0.0529,0.0406,0.7714
+Decision Tree,marital_binary,Single_Divorced,Married,0.0478,0.0372,0.0106,0.0054,0.7778
+Random Forest,marital_binary,Single_Divorced,Married,0.0469,0.0326,0.0143,0.0186,0.6945
+XGBoost,marital_binary,Single_Divorced,Married,0.0509,0.0384,0.0125,0.014,0.7547

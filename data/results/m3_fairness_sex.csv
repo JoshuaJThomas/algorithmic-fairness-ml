@@ -1,0 +1,5 @@
+model,sensitive_attribute,reference_group,comparison_group,positive_rate_reference,positive_rate_comparison,demographic_parity_difference,equalized_odds_difference,disparate_impact_ratio
+Logistic Regression,sex,Male,Female,0.4691,0.3004,0.1686,0.132,0.6405
+Decision Tree,sex,Male,Female,0.4611,0.2661,0.195,0.1759,0.5771
+Random Forest,sex,Male,Female,0.3912,0.2361,0.1552,0.1224,0.6034
+XGBoost,sex,Male,Female,0.4082,0.2275,0.1807,0.1748,0.5573

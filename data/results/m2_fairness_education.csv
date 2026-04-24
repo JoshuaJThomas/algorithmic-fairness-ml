@@ -1,0 +1,5 @@
+model,sensitive_attribute,reference_group,comparison_group,positive_rate_reference,positive_rate_comparison,demographic_parity_difference,equalized_odds_difference,disparate_impact_ratio
+Logistic Regression,education,Higher Education,Lower/Other,0.377,0.3586,0.0185,0.108,0.951
+Decision Tree,education,Higher Education,Lower/Other,0.1158,0.1305,0.0147,0.0405,1.1265
+Random Forest,education,Higher Education,Lower/Other,0.1138,0.1387,0.0249,0.0264,1.2188
+XGBoost,education,Higher Education,Lower/Other,0.1148,0.1378,0.023,0.0252,1.2001
