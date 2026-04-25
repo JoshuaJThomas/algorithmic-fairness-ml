@@ -1,6 +1,58 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Microsoft Office temporary files
 ~$*
-.Rhistory
-*.pyc
+
+# Python
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
 .ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# Large binary outputs — keep source data but not regenerated model artifacts
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini

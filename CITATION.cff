@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it using the metadata below."
+type: software
+title: "Algorithmic Fairness in Machine Learning: A Multi-Dataset Analysis"
+abstract: >
+  An IEEE-style research investigation into demographic bias across four
+  real-world ML classification tasks (Adult Census, COMPAS, Bank Marketing,
+  Credit Default). Evaluates four classifiers under both standard performance
+  metrics and three fairness operationalisations: demographic parity difference,
+  equalised odds difference, and disparate impact ratio.
+authors:
+  - name: "NCI Dublin MSc Artificial Intelligence Group"
+repository-code: "https://github.com/joshuajthomas/algorithmic-fairness-ml"
+license: MIT
+date-released: "2025-01-01"
+keywords:
+  - algorithmic fairness
+  - machine learning
+  - bias detection
+  - disparate impact
+  - demographic parity
+  - equalised odds
+  - COMPAS
+  - adult census
+  - credit default
+  - bank marketing
