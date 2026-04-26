@@ -4,3 +4,15 @@
 *.pyc
 __pycache__/
 .ipynb_checkpoints/
+.env
+.venv/
+.venv*/
+venv/
+data/adult/
+data/bank_marketing/
+data/compas/
+data/credit_default/
+*.pkl
+*.joblib
+*.sqlite
+*.db
