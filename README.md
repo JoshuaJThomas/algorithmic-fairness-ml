@@ -1,38 +1,77 @@
 # Algorithmic Fairness in Machine Learning
 
-IEEE-style research paper investigating bias and fairness across four real-world ML classification tasks. Analyses how demographic disparities manifest in model predictions and evaluates mitigation strategies.
+MSc Artificial Intelligence research project auditing fairness and predictive performance across four high-stakes classification case studies.
 
-## Overview
+This project compares standard ML performance with fairness metrics. It does **not** claim to prove real-world discrimination. It treats each dataset as a benchmark for understanding how model choices, protected attributes, and fairness definitions can produce different risk profiles.
 
-Four datasets, four fairness challenges:
-- **Adult Census** — income prediction, protected attribute: sex & race
-- **COMPAS** — recidivism risk scoring, protected attribute: race
-- **Bank Marketing** — credit subscription, protected attribute: education & gender
-- **Credit Default** — loan default prediction, protected attribute: marital status & age
+## 30-Second Summary
 
-Each model (M1–M4) is evaluated on both standard performance metrics (AUC, accuracy, F1) and fairness metrics (demographic parity, disparate impact, equalised odds).
+- **Question:** are accurate ML classifiers necessarily fair when decisions affect income, credit, recidivism, or marketing outcomes?
+- **Scope:** four datasets, four model families, standard metrics, and fairness metrics.
+- **Models:** Logistic Regression, Decision Tree, Random Forest, and XGBoost.
+- **Fairness metrics:** demographic parity difference, equalized odds difference, and disparate impact ratio.
+- **Main finding:** accuracy and fairness do not move together reliably; the best-performing model is not automatically the safest model to deploy.
 
-## Tech Stack
-- Python 3.x
-- Scikit-learn
-- Pandas / NumPy
-- Matplotlib / Seaborn
+![Disparate impact heatmap across case studies](paper/figures/group_disparate_impact_heatmap.png)
 
-## Structure
+## Case Studies
+
+| Case study | Prediction task | Protected attributes |
+| --- | --- | --- |
+| Adult Census | Income prediction | Race, sex |
+| Credit Default | Default risk prediction | Gender, education |
+| COMPAS | Recidivism risk prediction | Race, sex |
+| Bank Marketing | Subscription/conversion prediction | Age, marital status |
+
+## What To Inspect First
+
+1. [`paper/figures/group_disparate_impact_heatmap.png`](paper/figures/group_disparate_impact_heatmap.png) for the main fairness-risk overview.
+2. [`paper/figures/group_auc_heatmap.png`](paper/figures/group_auc_heatmap.png) for the performance comparison.
+3. [`data/results/`](data/results/) for published standard and fairness metric CSVs.
+4. [`notebooks/group_synthesis.ipynb`](notebooks/group_synthesis.ipynb) for the cross-case synthesis.
+5. [`paper/IEEE_Fairness_Paper_humanized.docx`](paper/IEEE_Fairness_Paper_humanized.docx) and [`paper/Fairness_Slides.pdf`](paper/Fairness_Slides.pdf) for the report and presentation.
+
+## Repository Structure
+
+```text
+notebooks/      Analysis notebooks for each case study and group synthesis
+data/results/   Published standard metrics and fairness metrics
+paper/          Report, slides, and result figures
+requirements.txt
 ```
-notebooks/     # Jupyter analysis notebooks
-data/          # Datasets (COMPAS, Adult, Bank Marketing, Credit Default) + results CSVs
-paper/         # IEEE research paper (docx), slides (pdf), result figures
-```
 
-## Key Results
-See `paper/figures/` for fairness metric heatmaps and performance comparisons across all four models and demographic groups.
+Raw datasets are intentionally excluded from this public repository. They must be obtained from their original sources before a full rerun. The repository keeps the notebooks, derived metrics, figures, and report so readers can inspect the analysis without redistributing source datasets.
 
-## Run
+## Reproduce
+
 ```bash
-pip install scikit-learn pandas numpy matplotlib seaborn jupyter
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 jupyter notebook notebooks/
 ```
 
----
-MSc Artificial Intelligence — NCI Dublin, 2025
+Python 3.11 is recommended. Some scientific Python packages may not have wheels for very new Python releases yet.
+
+Full notebook reruns require placing the original datasets back under the paths expected by the notebooks:
+
+```text
+data/adult/
+data/credit_default/
+data/compas/
+data/bank_marketing/
+```
+
+The published CSVs in `data/results/` and figures in `paper/figures/` are included for review without rerunning the raw-data pipeline.
+
+## Limitations
+
+- This is a benchmark-style fairness audit, not a causal discrimination study.
+- Fairness metrics can disagree because they encode different definitions of parity.
+- Dataset labels and historical collection processes may contain their own biases.
+- Results should be read as model-risk evidence, not as deployment approval.
+
+## Author
+
+Joshua Joenathan Thomas  
+MSc Artificial Intelligence, National College of Ireland.
